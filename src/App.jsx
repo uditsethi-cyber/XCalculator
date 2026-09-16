@@ -27,55 +27,31 @@ function App() {
           width="100%"
         />
         <h3>{result}</h3>
-        <Grid container justifyContent="space-between" spacing={2}>
-          <Grid item size={3}>
-            <button onClick={handleExp}>7</button>
-          </Grid>
-          <Grid item size={3}>
-            <button onClick={handleExp}>8</button>
-          </Grid>
-          <Grid item size={3}>
-            <button onClick={handleExp}>9</button>
-          </Grid>
-          <Grid item size={3}>
-            <button onClick={handleExp}>+</button>
-          </Grid>
-          <Grid item size={3}>
-            <button onClick={handleExp}>4</button>
-          </Grid>
-          <Grid item size={3}>
-            <button onClick={handleExp}>5</button>
-          </Grid>
-          <Grid item size={3}>
-            <button onClick={handleExp}>6</button>
-          </Grid>
-          <Grid item size={3}>
-            <button onClick={handleExp}>-</button>
-          </Grid>
-          <Grid item size={3}>
-            <button onClick={handleExp}>1</button>
-          </Grid>
-          <Grid item size={3}>
-            <button onClick={handleExp}>2</button>
-          </Grid>
-          <Grid item size={3}>
-            <button onClick={handleExp}>3</button>
-          </Grid>
-          <Grid item size={3}>
-            <button onClick={handleExp}>*</button>
-          </Grid>
-          <Grid item size={3}>
-            <button onClick={() => setExp("")}>C</button>
-          </Grid>
-          <Grid item size={3}>
-            <button onClick={handleExp}>0</button>
-          </Grid>
-          <Grid item size={3}>
-            <button onClick={showResult}>=</button>
-          </Grid>
-          <Grid item size={3}>
-            <button onClick={handleExp}>/</button>
-          </Grid>
+        <Grid
+          container
+          sx={{
+            display: "grid",
+            gridTemplateColumns: "repeat(4, 1fr)",
+            gap: 2,
+            width: "100%",
+          }}
+        >
+          <button onClick={handleExp}>7</button>
+          <button onClick={handleExp}>8</button>
+          <button onClick={handleExp}>9</button>
+          <button onClick={handleExp}>+</button>
+          <button onClick={handleExp}>4</button>
+          <button onClick={handleExp}>5</button>
+          <button onClick={handleExp}>6</button>
+          <button onClick={handleExp}>-</button>
+          <button onClick={handleExp}>1</button>
+          <button onClick={handleExp}>2</button>
+          <button onClick={handleExp}>3</button>
+          <button onClick={handleExp}>*</button>
+          <button onClick={() => setExp("")}>C</button>
+          <button onClick={handleExp}>0</button>
+          <button onClick={showResult}>=</button>
+          <button onClick={handleExp}>/</button>
         </Grid>
       </section>
     </>
