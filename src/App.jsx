@@ -25,6 +25,7 @@ function App() {
           value={exp}
           onChange={(e) => setExp(e.target.value)}
           width="100%"
+          type="text"
         />
         <h3>{result}</h3>
         <Grid
