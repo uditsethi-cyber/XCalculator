@@ -7,6 +7,10 @@ function App() {
   const [exp, setExp] = useState("");
   const showResult = () => {
     try {
+      if (exp === "") {
+        setResult("Error");
+        return;
+      }
       const res = eval(exp);
       setResult(res);
     } catch (e) {
